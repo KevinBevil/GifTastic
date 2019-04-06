@@ -76,7 +76,11 @@ $("#buttons-view").on("click", "button", function () {
         // Creating and storing an image tag
         var countryImage = $("<img>");
         // Setting the src attribute of the image to a property pulled off the result item
-        countryImage.attr("src", results[i].images.fixed_height.url);
+        countryImage.attr("src", results[i].images.fixed_height_still.url);
+        countryImage.attr("data-state", "still");
+        countryImage.attr("data-animate", results[i].images.fixed_height.url);
+        countryImage.attr("data-still", results[i].images.fixed_height_still.url);
+
 
         // Appending the paragraph and image tag to the countryDiv
         countryDiv.append(p);
@@ -87,4 +91,16 @@ $("#buttons-view").on("click", "button", function () {
       }
     });
 });
-// $(document).on("click", ".movie", alertMovieName);
+$("#countries-view").on("click", "img", function() {
+  // imgState holds the current state of our image -- animate or still
+  var imgState = $(this).attr("data-state");
+  // When the image is clicked, the src is updated.
+
+  if (imgState === "still") {
+    $(this).attr("src", $(this).attr("data-animate"));
+    $(this).attr("data-state", "animate");
+  } else {
+    $(this).attr("src", $(this).attr("data-still"));
+    $(this).attr("data-state", "still");
+  }
+});
