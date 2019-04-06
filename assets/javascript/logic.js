@@ -5,12 +5,12 @@ var countries = ["Thailand", "Scotland", "New Zealand", "China", "England", "Tib
 
 // Function for displaying country gif
 function renderButtons() {
-  
+
   // Empties out the dom of buttons before creating them fresh
   $("#buttons-view").empty();
   // Loops through the array of countrys
   for (var i = 0; i < countries.length; i++) {
-    
+
     //  A button is created for each element in the array
     var buttonToBeRendered = $("<button>");
     // adds a class of country on to every button
@@ -29,10 +29,10 @@ $("#add-country").on("click", function (event) {
   event.preventDefault();
   // This line of code will grab the input from the textbox
   var country = $("#country-input").val().trim();
-  
+
   // The new user-entered country is added to our array
   countries.push(country);
-  
+
   // The buttons are fleshed out using the renderButtons function
   renderButtons();
 });
@@ -43,7 +43,7 @@ $("#add-country").on("click", function (event) {
 // Calling the renderButtons function to display the intial buttons
 renderButtons();
 
-$("button").on("click", function () {
+$("#buttons-view").on("click", "button", function () {
   // Grabbing and storing the data-country property value from the button
   var country = $(this).attr("data-name");
 
