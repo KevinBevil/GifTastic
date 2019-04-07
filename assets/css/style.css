@@ -6,11 +6,50 @@ form {
    margin-top: 30px;
 }
 button {
+   font-size: 16px;
+   padding: 3px 8px 3px 8px;
    background-color: rgb(4, 78, 124);
    margin: 5px;
    color: white;
+   margin-left: 7px;
+   margin-right: 7px;
+   border-radius: 5px;
+   border: 3px rgb(205, 238, 255);
+   transition-duration: 0.9s;
+  -webkit-transition-duration: 0.9s;
+  -moz-transition-duration: 0.9s;
 }
+button:hover {
+   background-color: rgb(51, 50, 1);
+   margin: 5px;
+   color: rgb(255, 217, 217);
+   margin-left: 7px;
+   margin-right: 7px;
+   border-radius: 5px;
+   border: 3px rgb(239, 250, 255);
+   transition-duration: 0.9s;
+   -webkit-transition-duration: 0.9s;
+   -moz-transition-duration: 0.9s;
+}
+button:active {
+   background-color: rgba(132, 134, 3, 0.623);
+   font-weight: 600
+   margin: 5px;
+   color: rgb(95, 0, 0);
+   margin-left: 7px;
+   margin-right: 7px;
+   border-radius: 5px;
+   border: 3px rgb(239, 250, 255);
+   transition-duration: 0.1s;
+   -webkit-transition-duration: 0.1s;
+   -moz-transition-duration: 0.1s;
+}
+#buttons-view {
+   margin-top: 20px;
 
+}
 body {
+   height: 100%;
+
    background-color: rgb(255, 234, 195);
 }

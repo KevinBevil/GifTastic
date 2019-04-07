@@ -21,6 +21,8 @@ function renderButtons() {
     buttonToBeRendered.text(countries[i]);
     // Added the button to the buttons-view div
     $("#buttons-view").append(buttonToBeRendered);
+
+
   }
 }
 
@@ -32,9 +34,10 @@ $("#add-country").on("click", function (event) {
 
   // The new user-entered country is added to our array
   countries.push(country);
-
+  $("#country-input").text('');
   // The buttons are fleshed out using the renderButtons function
   renderButtons();
+
 });
 
 // Adding click event listeners to all elements with a class of "country"
