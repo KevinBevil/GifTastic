@@ -1,0 +1,16 @@
+form {
+   float: right;
+}
+
+#countries-view {
+   margin-top: 30px;
+}
+button {
+   background-color: rgb(4, 78, 124);
+   margin: 5px;
+   color: white;
+}
+
+body {
+   background-color: rgb(255, 234, 195);
+}
